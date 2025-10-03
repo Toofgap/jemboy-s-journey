@@ -5,8 +5,9 @@ import { INITIAL_LIFE_STAGES } from './constants';
 import Map from './components/Map';
 import GalleryModal from './components/GalleryModal';
 
-const scooterImageUrl = '/images/scooter.png';
-const mapImageUrl = '/images/map.png';
+const scooterImageUrl = `${import.meta.env.BASE_URL}scooter.png`;
+const mapImageUrl = `${import.meta.env.BASE_URL}map.jpeg`;
+;
 
 export default function App() {
   const [stagesData, setStagesData] = useState<LifeStage[]>(INITIAL_LIFE_STAGES);
