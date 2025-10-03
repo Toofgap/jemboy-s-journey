@@ -4,7 +4,7 @@ import { LifeStage } from './types';
 const childhoodPhotos = (stage: string, count: number) => {
   return Array.from({ length: count }, (_, i) => ({
     id: i + 1,
-    src: `public/childhood/${i + 1}.jpeg`, // look for images like public/images/childhood1.jpg
+    src: `${import.meta.env.BASE_URL}childhood/${i + 1}.jpeg`, // look for images like public/images/childhood1.jpg
     alt: `A memory from his ${stage} years.`,
   }));
 };
@@ -12,7 +12,7 @@ const childhoodPhotos = (stage: string, count: number) => {
 const earlyTeensPhotos = (stage: string, count: number) => {
   return Array.from({ length: count }, (_, i) => ({
     id: i + 1,
-    src: `/early-teens/${i + 1}.jpeg`, // look for images like public/images/childhood1.jpg
+    src: `${import.meta.env.BASE_URL}early-teens/${i + 1}.jpeg`, // look for images like public/images/childhood1.jpg
     alt: `A memory from his ${stage} years.`,
   }));
 };
@@ -20,7 +20,7 @@ const earlyTeensPhotos = (stage: string, count: number) => {
 const lateTeensPhotos = (stage: string, count: number) => {
   return Array.from({ length: count }, (_, i) => ({
     id: i + 1,
-    src: `/late-teens/${i + 1}.jpeg`, // look for images like public/images/childhood1.jpeg
+    src: `${import.meta.env.BASE_URL}late-teens/${i + 1}.jpeg`, // look for images like public/images/childhood1.jpg
     alt: `A memory from his ${stage} years.`,
   }));
 };
@@ -28,7 +28,7 @@ const lateTeensPhotos = (stage: string, count: number) => {
 const earlyAdulthoodPhotos = (stage: string, count: number) => {
   return Array.from({ length: count }, (_, i) => ({
     id: i + 1,
-    src: `/early-adulthood/${i + 1}.jpeg`, // look for images like public/images/childhood1.jpeg
+    src: `${import.meta.env.BASE_URL}early-adulthood/${i + 1}.jpeg`, // look for images like public/images/childhood1.jpeg
     alt: `A memory from his ${stage} years.`,
   }));
 };
@@ -36,7 +36,7 @@ const earlyAdulthoodPhotos = (stage: string, count: number) => {
 const journeysEndPhotos = (stage: string, count: number) => {
   return Array.from({ length: count }, (_, i) => ({
     id: i + 1,
-    src: `/journeys-end/${i + 1}.jpeg`, // look for images like public/images/childhood1.jpg
+    src: `${import.meta.env.BASE_URL}journeys-end/${i + 1}.jpeg`, // look for images like public/images/childhood1.jpg
     alt: `A memory from his ${stage} years.`,
   }));
 };
