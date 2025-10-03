@@ -6,7 +6,7 @@ import Map from './components/Map';
 import GalleryModal from './components/GalleryModal';
 
 const scooterImageUrl = `${import.meta.env.BASE_URL}images/scooter.png`;
-const mapImageUrl = `${import.meta.env.BASE_URL}images/map.jpeg`;
+const mapImageUrl = `${import.meta.env.BASE_URL}images/map.png`;
 ;
 
 export default function App() {
