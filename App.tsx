@@ -5,8 +5,8 @@ import { INITIAL_LIFE_STAGES } from './constants';
 import Map from './components/Map';
 import GalleryModal from './components/GalleryModal';
 
-const scooterImageUrl = `${import.meta.env.BASE_URL}scooter.png`;
-const mapImageUrl = `${import.meta.env.BASE_URL}map.jpeg`;
+const scooterImageUrl = `${import.meta.env.BASE_URL}images/scooter.png`;
+const mapImageUrl = `${import.meta.env.BASE_URL}images/map.jpeg`;
 ;
 
 export default function App() {
