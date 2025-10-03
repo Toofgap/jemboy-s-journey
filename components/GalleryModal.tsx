@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { LifeStage } from '../types';
+import ImageViewer from './ImageViewer';
 
 interface GalleryModalProps {
   stage: LifeStage;
@@ -16,6 +17,7 @@ const CloseIcon: React.FC<{ className?: string }> = ({ className }) => (
 
 const GalleryModal: React.FC<GalleryModalProps> = ({ stage, onClose }) => {
   const [isShowing, setIsShowing] = useState(false);
+  const [selectedImageSrc, setSelectedImageSrc] = useState<string | null>(null);
 
   useEffect(() => {
     // Mount animation
@@ -77,12 +79,19 @@ const GalleryModal: React.FC<GalleryModalProps> = ({ stage, onClose }) => {
                   alt={photo.alt}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                   loading="lazy"
+                  onClick={() => setSelectedImageSrc(photo.src)}
                 />
               </div>
             ))}
           </div>
         </div>
       </div>
+      {selectedImageSrc && (
+        <ImageViewer
+          src={selectedImageSrc}
+          onClose={() => setSelectedImageSrc(null)}
+        />
+      )}
     </div>
   );
 };

@@ -2,7 +2,9 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { LifeStage } from "../types";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY as string });
+const ai = new GoogleGenAI({
+    apiKey: import.meta.env.VITE_API_KEY as string,
+  });  
 
 export async function generateMessages(): Promise<Record<LifeStage['id'], string>> {
     try {
